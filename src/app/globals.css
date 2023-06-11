@@ -3,25 +3,311 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --light-color: #F2E9D0;
+  --dark-color: #0B2447;
+  --transition-duration: 0.7s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.theme {
+  background: var(--light-color);
+  transition: background var(--transition-duration);
+  /* transition-delay: .1s; */
+}
+
+.dark .theme {
+  background: var(--dark-color);
+  transition: background var(--transition-duration);
+  /* transition-delay: .1s; */
+}
+
+.background-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.dark .moon-sun {
+  background-image: url('../../public/dark-bg/moon.svg');
+  background-size: 12%;
+  background-repeat: no-repeat;
+  background-position: 75% calc(100% - 80%);
+  transition: .3s;
+  transition-delay: .1s;
+  z-index: -8;
+  animation: moonRise 1s forwards;
+}
+
+@keyframes moonRise {
+  0% {
+    background-position: 75% 100%;
+    /* Start position at bottom */
+    opacity: 0;
+    /* Initially hidden */
+  }
+
+  100% {
+    background-position: 75% calc(100% - 80%);
+    /* End position slightly above bottom */
+    opacity: 1;
+    /* Fully visible */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media screen and (max-width: 1024px) {
+  .dark .moon-sun {
+    background-position: 75% calc(100% - 50%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes moonRise {
+    0% {
+      background-position: 75% 100%;
+      /* Start position at bottom */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    100% {
+      background-position: 75% calc(100% - 50%);
+      /* End position slightly above bottom */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dark .moon-sun {
+    background-position: 75% calc(100% - 25%);
+    /* Adjust the vertical position for even smaller screens */
+  }
+
+  @keyframes moonRise {
+    0% {
+      background-position: 75% 100%;
+      /* Start position at bottom */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    100% {
+      background-position: 75% calc(100% - 25%);
+      /* End position slightly above bottom */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+.dark .cloud-big {
+  background-image: url('../../public/dark-bg/cloud-big.svg');
+  background-size: auto;
+  background-position: 50% calc(100% - 75%);
+  background-repeat: no-repeat;
+  transition: .3s;
+  z-index: -7;
+  animation: cloudBigAppear 1s forwards;
+  transform: translateX(100%) scale(1.4);
+}
+
+@keyframes cloudBigAppear {
+  0% {
+    transform: translateX(100%) scale(1.4);
+    /* Start position off the screen on the right */
+    opacity: 0;
+    /* Initially hidden */
+  }
+  100% {
+    transform: translateX(0) scale(1.4);
+    /* End position at the center of the screen */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dark .cloud-big {
+    background-position: 50% calc(100% - 45%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes cloudBigAppear {
+    0% {
+      transform: translateX(100%) scale(1.4);
+      /* Start position off the screen on the right */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    100% {
+      transform: translateX(0) scale(1.4);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dark .cloud-big {
+    background-position: 50% calc(100% - 30%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes cloudBigAppear {
+    0% {
+      transform: translateX(100%) scale(1.4);
+      /* Start position off the screen on the right */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    100% {
+      transform: translateX(0) scale(1.4);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+.dark .cloud-small {
+  background-image: url('../../public/dark-bg/cloud-small.svg');
+  background-size: auto;
+  background-position: 50% calc(100% - 95%);
+  background-repeat: no-repeat;
+  transition: .3s;
+  z-index: -7;
+  animation: cloudSmallAppear 1s forwards;
+  transform: translateX(100%) scale(0.9);
+}
+
+@keyframes cloudSmallAppear {
+  0% {
+    transform: translateX(100%) scale(0.9);
+    /* Start position off the screen on the right */
+    opacity: 0;
+    /* Initially hidden */
+  }
+  100% {
+    transform: translateX(0) scale(0.9);
+    /* End position at the center of the screen */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dark .cloud-small {
+    background-position: 50% calc(100% - 50%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes cloudSmallAppear {
+    0% {
+      transform: translateX(100%) scale(0.9);
+      /* Start position off the screen on the right */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    100% {
+      transform: translateX(0) scale(0.9);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dark .cloud-small {
+    background-position: 50% calc(100% - 20%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes cloudSmallAppear {
+    0% {
+      transform: translateX(100%) scale(0.9);
+      /* Start position off the screen on the right */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    100% {
+      transform: translateX(0) scale(0.9);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+.dark .mountain-1,
+.dark .mountain-2,
+.dark .mountain-3,
+.dark .mountain-4,
+.dark .mountain-5 {
+  opacity: 0;
+}
+
+.dark .mountain-1 {
+  background-image: url('../../public/dark-bg/mountain1.svg');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -7;
+  animation: mountainRise 1s forwards;
+}
+
+.dark .mountain-2 {
+  background-image: url('../../public/dark-bg/mountain2.svg');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -6;
+  animation: mountainRise 1s forwards;
+  animation-delay: .1s;
+}
+
+.dark .mountain-3 {
+  background-image: url('../../public/dark-bg/mountain3.svg');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -5;
+  animation: mountainRise 1s forwards;
+  animation-delay: .2s;
+}
+
+.dark .mountain-4 {
+  background-image: url('../../public/dark-bg/mountain4.svg');
+  background-size: 70%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -4;
+  animation: mountainRise 1s forwards;
+  animation-delay: .3s;
+}
+
+.dark .mountain-5 {
+  background-image: url('../../public/dark-bg/mountain5.svg');
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -3;
+  animation: mountainRise 1s forwards;
+  animation-delay: .4s;
+}
+
+@keyframes mountainRise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
