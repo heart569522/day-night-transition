@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} theme`}>
+      <body className={`${inter.className} theme w-full h-screen`}>
         <ThemeBG />
         <Providers>
           <NavBar />
