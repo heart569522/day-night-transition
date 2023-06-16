@@ -26,6 +26,363 @@
   height: 100%;
 }
 
+.moon-sun {
+  background-image: url('../../public/light-bg/sun.svg');
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: 58% calc(100% - 35%);
+  transition: .3s;
+  transition-delay: .5s;
+  z-index: -8;
+  animation: sunRise 1s forwards;
+}
+
+@keyframes sunRise {
+  0% {
+    background-position: 58% 100%;
+    /* Start position at bottom */
+    opacity: 0;
+    /* Initially hidden */
+  }
+
+  50% {
+    background-position: 58% calc(100% - 5%);
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 58% calc(100% - 35%);
+    /* End position slightly above bottom */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@media screen and (max-width: 1565px) {
+  .moon-sun {
+    background-position: 58% calc(100% - 15%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes sunRise {
+    0% {
+      background-position: 58% 100%;
+      /* Start position at bottom */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      background-position: 58% calc(100% - 5%);
+      opacity: 0;
+    }
+
+    100% {
+      background-position: 58% calc(100% - 15%);
+      /* End position slightly above bottom */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .moon-sun {
+    background-position: 58% calc(100% - 10%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes sunRise {
+    0% {
+      background-position: 58% 100%;
+      /* Start position at bottom */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      background-position: 58% calc(100% - 5%);
+      opacity: 0;
+    }
+
+    100% {
+      background-position: 58% calc(100% - 10%);
+      /* End position slightly above bottom */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .moon-sun {
+    background-position: 58% calc(100% - 8%);
+    /* Adjust the vertical position for even smaller screens */
+  }
+
+  @keyframes sunRise {
+    0% {
+      background-position: 58% 100%;
+      /* Start position at bottom */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      background-position: 58% calc(100% - 5%);
+      opacity: 0;
+    }
+
+    100% {
+      background-position: 58% calc(100% - 8%);
+      /* End position slightly above bottom */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+.cloud-big {
+  background-image: url('../../public/light-bg/cloud-big.svg');
+  background-size: auto;
+  background-position: 50% calc(100% - 75%);
+  background-repeat: no-repeat;
+  transition: .3s;
+  z-index: -7;
+  animation: light-cloudBigAppear 1s forwards;
+  transform: translateX(100%) scale(1.4);
+}
+
+@keyframes light-cloudBigAppear {
+  0% {
+    transform: translateX(100%) scale(1.4);
+    /* Start position off the screen on the right */
+    opacity: 0;
+    /* Initially hidden */
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) scale(1.4);
+    /* End position at the center of the screen */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cloud-big {
+    background-position: 50% calc(100% - 45%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes light-cloudBigAppear {
+    0% {
+      transform: translateX(100%) scale(1.4);
+      /* Start position off the screen on the right */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0) scale(1.4);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cloud-big {
+    background-position: 50% calc(100% - 30%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes light-cloudBigAppear {
+    0% {
+      transform: translateX(100%) scale(1.4);
+      /* Start position off the screen on the right */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0) scale(1.4);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+.cloud-small {
+  background-image: url('../../public/light-bg/cloud-small.svg');
+  background-size: auto;
+  background-position: 50% calc(100% - 95%);
+  background-repeat: no-repeat;
+  transition: .3s;
+  z-index: -7;
+  animation: light-cloudSmallAppear 1s forwards;
+  transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+}
+
+@keyframes light-cloudSmallAppear {
+  0% {
+    transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+    /* Start position off the screen on the left */
+    opacity: 0;
+    /* Initially hidden */
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) scale(0.9);
+    /* End position at the center of the screen */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cloud-small {
+    background-position: 50% calc(100% - 50%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes light-cloudSmallAppear {
+    0% {
+      transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+      /* Start position off the screen on the left */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0) scale(0.9);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cloud-small {
+    background-position: 50% calc(100% - 20%);
+    /* Adjust the vertical position for smaller screens */
+  }
+
+  @keyframes light-cloudSmallAppear {
+    0% {
+      transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+      /* Start position off the screen on the left */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0) scale(0.9);
+      /* End position at the center of the screen */
+      opacity: 1;
+      /* Fully visible */
+    }
+  }
+}
+
+.mountain-1,
+.mountain-2,
+.mountain-3,
+.mountain-4,
+.mountain-5 {
+  opacity: 0;
+}
+
+.mountain-1 {
+  background-image: url('../../public/light-bg/mountain1.svg');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -7;
+  animation: light-mountainRise 1s forwards;
+}
+
+.mountain-2 {
+  background-image: url('../../public/light-bg/mountain2.svg');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -6;
+  animation: light-mountainRise 1s forwards;
+  animation-delay: .1s;
+}
+
+.mountain-3 {
+  background-image: url('../../public/light-bg/mountain3.svg');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -5;
+  animation: light-mountainRise 1s forwards;
+  animation-delay: .2s;
+}
+
+.mountain-4 {
+  background-image: url('../../public/light-bg/mountain4.svg');
+  background-size: 70%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -4;
+  animation: light-mountainRise 1s forwards;
+  animation-delay: .3s;
+}
+
+.mountain-5 {
+  background-image: url('../../public/light-bg/mountain5.svg');
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -3;
+  animation: light-mountainRise 1s forwards;
+  animation-delay: .4s;
+}
+
+@keyframes light-mountainRise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+/* DARK MODE */
 .dark .moon-sun {
   background-image: url('../../public/dark-bg/moon.svg');
   background-size: 12%;
@@ -43,6 +400,10 @@
     /* Start position at bottom */
     opacity: 0;
     /* Initially hidden */
+  }
+
+  20% {
+    opacity: 0;
   }
 
   100% {
@@ -67,6 +428,10 @@
       /* Initially hidden */
     }
 
+    20% {
+      opacity: 0;
+    }
+
     100% {
       background-position: 75% calc(100% - 50%);
       /* End position slightly above bottom */
@@ -88,6 +453,10 @@
       /* Start position at bottom */
       opacity: 0;
       /* Initially hidden */
+    }
+
+    20% {
+      opacity: 0;
     }
 
     100% {
@@ -117,6 +486,11 @@
     opacity: 0;
     /* Initially hidden */
   }
+
+  50% {
+    opacity: 0;
+  }
+
   100% {
     transform: translateX(0) scale(1.4);
     /* End position at the center of the screen */
@@ -137,6 +511,10 @@
       /* Start position off the screen on the right */
       opacity: 0;
       /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
     }
 
     100% {
@@ -162,6 +540,10 @@
       /* Initially hidden */
     }
 
+    50% {
+      opacity: 0;
+    }
+
     100% {
       transform: translateX(0) scale(1.4);
       /* End position at the center of the screen */
@@ -179,16 +561,21 @@
   transition: .3s;
   z-index: -7;
   animation: cloudSmallAppear 1s forwards;
-  transform: translateX(100%) scale(0.9);
+  transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
 }
 
 @keyframes cloudSmallAppear {
   0% {
-    transform: translateX(100%) scale(0.9);
-    /* Start position off the screen on the right */
+    transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+    /* Start position off the screen on the left */
     opacity: 0;
     /* Initially hidden */
   }
+
+  50% {
+    opacity: 0;
+  }
+
   100% {
     transform: translateX(0) scale(0.9);
     /* End position at the center of the screen */
@@ -205,10 +592,14 @@
 
   @keyframes cloudSmallAppear {
     0% {
-      transform: translateX(100%) scale(0.9);
-      /* Start position off the screen on the right */
+      transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+      /* Start position off the screen on the left */
       opacity: 0;
       /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
     }
 
     100% {
@@ -228,10 +619,14 @@
 
   @keyframes cloudSmallAppear {
     0% {
-      transform: translateX(100%) scale(0.9);
-      /* Start position off the screen on the right */
+      transform: translateX(-100%) scale(0.9); /* Change translateX value to negative */
+      /* Start position off the screen on the left */
       opacity: 0;
       /* Initially hidden */
+    }
+
+    50% {
+      opacity: 0;
     }
 
     100% {
