@@ -11,13 +11,11 @@
 .theme {
   background: var(--light-color);
   transition: background var(--transition-duration);
-  height: 100vh;
 }
 
 .dark .theme {
   background: var(--dark-color);
   transition: background var(--transition-duration);
-  height: 100vh;
 }
 
 .background-layer {
