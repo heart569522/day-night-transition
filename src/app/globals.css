@@ -25,7 +25,7 @@
 }
 
 .moon-sun {
-  background-image: url('../../public/light-bg/sun.svg');
+  background-image: url('/light-bg/sun.svg');
   background-size: 20%;
   background-repeat: no-repeat;
   background-position: 58% calc(100% - 35%);
@@ -141,7 +141,7 @@
 }
 
 .cloud-big {
-  background-image: url('../../public/light-bg/cloud-big.svg');
+  background-image: url('/light-bg/cloud-big.svg');
   background-size: auto;
   background-position: 50% calc(100% - 75%);
   background-repeat: no-repeat;
@@ -226,7 +226,7 @@
 }
 
 .cloud-small {
-  background-image: url('../../public/light-bg/cloud-small.svg');
+  background-image: url('/light-bg/cloud-small.svg');
   background-size: auto;
   background-position: 50% calc(100% - 95%);
   background-repeat: no-repeat;
@@ -319,7 +319,7 @@
 }
 
 .mountain-1 {
-  background-image: url('../../public/light-bg/mountain1.svg');
+  background-image: url('/light-bg/mountain1.svg');
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -328,7 +328,7 @@
 }
 
 .mountain-2 {
-  background-image: url('../../public/light-bg/mountain2.svg');
+  background-image: url('/light-bg/mountain2.svg');
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -338,7 +338,7 @@
 }
 
 .mountain-3 {
-  background-image: url('../../public/light-bg/mountain3.svg');
+  background-image: url('/light-bg/mountain3.svg');
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -348,7 +348,7 @@
 }
 
 .mountain-4 {
-  background-image: url('../../public/light-bg/mountain4.svg');
+  background-image: url('/light-bg/mountain4.svg');
   background-size: 70%;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -358,7 +358,7 @@
 }
 
 .mountain-5 {
-  background-image: url('../../public/light-bg/mountain5.svg');
+  background-image: url('/light-bg/mountain5.svg');
   background-size: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -382,7 +382,7 @@
 
 /* DARK MODE */
 .dark .moon-sun {
-  background-image: url('../../public/dark-bg/moon.svg');
+  background-image: url('/dark-bg/moon.svg');
   background-size: 12%;
   background-repeat: no-repeat;
   background-position: 75% calc(100% - 80%);
@@ -467,7 +467,7 @@
 }
 
 .dark .cloud-big {
-  background-image: url('../../public/dark-bg/cloud-big.svg');
+  background-image: url('/dark-bg/cloud-big.svg');
   background-size: auto;
   background-position: 50% calc(100% - 75%);
   background-repeat: no-repeat;
@@ -552,7 +552,7 @@
 }
 
 .dark .cloud-small {
-  background-image: url('../../public/dark-bg/cloud-small.svg');
+  background-image: url('/dark-bg/cloud-small.svg');
   background-size: auto;
   background-position: 50% calc(100% - 95%);
   background-repeat: no-repeat;
@@ -645,7 +645,7 @@
 }
 
 .dark .mountain-1 {
-  background-image: url('../../public/dark-bg/mountain1.svg');
+  background-image: url('/dark-bg/mountain1.svg');
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -654,7 +654,7 @@
 }
 
 .dark .mountain-2 {
-  background-image: url('../../public/dark-bg/mountain2.svg');
+  background-image: url('/dark-bg/mountain2.svg');
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -664,7 +664,7 @@
 }
 
 .dark .mountain-3 {
-  background-image: url('../../public/dark-bg/mountain3.svg');
+  background-image: url('/dark-bg/mountain3.svg');
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -674,7 +674,7 @@
 }
 
 .dark .mountain-4 {
-  background-image: url('../../public/dark-bg/mountain4.svg');
+  background-image: url('/dark-bg/mountain4.svg');
   background-size: 70%;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -684,7 +684,7 @@
 }
 
 .dark .mountain-5 {
-  background-image: url('../../public/dark-bg/mountain5.svg');
+  background-image: url('/dark-bg/mountain5.svg');
   background-size: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;

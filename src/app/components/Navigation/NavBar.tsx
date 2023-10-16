@@ -4,7 +4,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function NavBar() {
     return (
-        <nav>
+        <nav className="top-0">
             <div className="flex items-center justify-between mx-auto p-4">
                 <div className="flex items-center">
                     <ButtonDrawer />
